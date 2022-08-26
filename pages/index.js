@@ -6,8 +6,12 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <>
-      <img className="w-full max-h-[1000px]  mx-auto" src="../ls2v2.jpeg" alt="">
-      </img>
+      <Image
+        src="/ls2v2.jpeg"
+        layout="responsive"
+        width={500}
+        height={500}
+      />
     </>
   )
 }

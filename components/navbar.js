@@ -54,12 +54,12 @@ export default function Navbar() {
 
         <div className="flex-initial px-4">
           <Link href="/projects">
-            <h2 class="cursor-pointer hover:text-green-500"> Projects </h2>
+            <h2 className="cursor-pointer hover:text-green-500"> Projects </h2>
           </Link>
         </div>
         <div className="flex-initial px-4">
           <Link href="/skills">
-            <h2 class="cursor-pointer hover:text-green-500"> Skills </h2>
+            <h2 className="cursor-pointer hover:text-green-500"> Skills </h2>
           </Link>
         </div>
         <div className="flex-initial px-4">

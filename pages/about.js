@@ -1,13 +1,18 @@
 import PersonalCard from '../components/personalCard.js'
 import Link from "next/link";
 import { AiFillGithub } from 'react-icons/ai';
+import Image from 'next/image'
 
 function Personal() {
   return (
     <>
     <div className="w-[400px] max-w-lg text-center p-2 m-4">
-      <img className="w-40 h-40 mx-auto" src="../ls.png" alt="">
-      </img>
+      <Image
+        src="/ls.png"
+        layout="fixed"
+        width={160}
+        height={160}
+      />
       <p className="text-black dark:text-white font-bold text-2xl m-1">Luís Sobral</p>
       <p className="text-green-700 dark:text-green-200 font-bold text-base">Software Engeneer</p>
       <Link href="https://github.com/luissobral4">
@@ -27,8 +32,7 @@ export default function About() {
       <div className="flex w-full max-w-xl mx-auto flex-col lg:flex-row justify-center items-center">
         <Personal />
         <p className="text-black dark:text-white px-2">
-          I'm a computing science student at University of Minho specialized in
-          distributed systems and aplications engeneering.
+          I am a computing science student at University of Minho specialized in distributed systems and aplications engeneering.
         </p>
       </div>
     </div>
