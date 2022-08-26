@@ -1,13 +1,8 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/about": "pages/about.html",
-  "/header": "pages/header.html",
-  "/api/hello": "pages/api/hello.js",
-  "/": "pages/index.html",
-  "/projects": "pages/projects.html",
-  "/skills": "pages/skills.html",
   "/_document": "pages/_document.js",
+  "/": "pages/index.js",
   "/project/[pid]": "pages/project/[pid].js",
-  "/404": "pages/404.html"
+  "/skills": "pages/skills.js"
 }
