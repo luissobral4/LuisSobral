@@ -2,10 +2,10 @@
 (() => {
 var exports = {};
 exports.id = 569;
-exports.ids = [569];
+exports.ids = [569,327];
 exports.modules = {
 
-/***/ 5688:
+/***/ 948:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -13,7 +13,9 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ project)
+  "default": () => (/* binding */ project),
+  "getStaticPaths": () => (/* binding */ getStaticPaths),
+  "getStaticProps": () => (/* binding */ getStaticProps)
 });
 
 // EXTERNAL MODULE: external "react/jsx-runtime"
@@ -133,8 +135,8 @@ function ProjectMenu({ name , description , image , category , languagues , date
 };
 ;
 
-;// CONCATENATED MODULE: external "next/router"
-const router_namespaceObject = require("next/router");
+// EXTERNAL MODULE: ./pages/projects.js
+var projects = __webpack_require__(8997);
 ;// CONCATENATED MODULE: ./pages/project/[pid].js
 
 
@@ -142,32 +144,7 @@ const router_namespaceObject = require("next/router");
 
 
 
-const PROJECT_LIST = [
-    {
-        name: "BusPrime",
-        description: "Platform focused in the comercialize public transport tickets",
-        image: "/busprime.png",
-        category: "Web Development",
-        languagues: "Java, HTML",
-        date: "June 2022",
-        technologies: "Vue.js",
-        link: "https://bus-prime-frontend.vercel.app/"
-    },
-    {
-        name: "Tanks",
-        description: "This an 2D game developed in haskell",
-        image: "/mapa2.bmp",
-        category: "Game",
-        languagues: "Haskell",
-        date: "December 2018",
-        technologies: "Gloss",
-        link: "https://github.com/luissobral4/Haskell-tanks-game"
-    }, 
-];
-function project() {
-    const router = (0,router_namespaceObject.useRouter)();
-    const { pid  } = router.query;
-    const item1 = PROJECT_LIST[pid];
+function project({ postData  }) {
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx("p", {
@@ -178,7 +155,7 @@ function project() {
                 className: "text-black dark:text-white font-bold lg:text-6xl text-3xl ml-2 mb-4",
                 children: [
                     " ",
-                    item1.name,
+                    postData.name,
                     " "
                 ]
             }),
@@ -188,14 +165,14 @@ function project() {
                     /*#__PURE__*/ jsx_runtime_.jsx("div", {
                         className: "mr-4",
                         children: /*#__PURE__*/ jsx_runtime_.jsx(ProjectMenu, {
-                            ...item1,
+                            ...postData,
                             className: "w-[500px] h-[300px] mx-auto"
                         })
                     }),
                     /*#__PURE__*/ jsx_runtime_.jsx("div", {
                         className: "",
                         children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                            src: item1.image,
+                            src: postData.image,
                             layout: "fixed",
                             width: 500,
                             height: 300
@@ -206,6 +183,21 @@ function project() {
         ]
     });
 };
+async function getStaticPaths() {
+    const paths = (0,projects.getAllPostIds)();
+    return {
+        paths,
+        fallback: false
+    };
+}
+async function getStaticProps({ params  }) {
+    const postData = (0,projects.getPostData)(params.pid);
+    return {
+        props: {
+            postData
+        }
+    };
+}
 
 
 /***/ }),
@@ -427,7 +419,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [952,61], () => (__webpack_exec__(5688)));
+var __webpack_exports__ = __webpack_require__.X(0, [952,61,244,997], () => (__webpack_exec__(948)));
 module.exports = __webpack_exports__;
 
 })();

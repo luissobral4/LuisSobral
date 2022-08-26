@@ -24,7 +24,7 @@ exports.modules = {
 
 
 
-function Card({ id , type , name , description , image  }) {
+function Card({ id , category , name , description , image  }) {
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_3___default()), {
             href: `/project/${id}`,
@@ -39,7 +39,7 @@ function Card({ id , type , name , description , image  }) {
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
                         className: "text-green-800 font-bold text-base m-1",
-                        children: type
+                        children: category
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
                         className: "text-black font-bold text-xl",

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { AiFillGithub } from 'react-icons/ai';
 
 
-export default function Card({id,type,name,description,image}) {
+export default function Card({id,category,name,description,image}) {
   return (
     <>
       <Link href= {`/project/${id}`}>
@@ -15,7 +15,7 @@ export default function Card({id,type,name,description,image}) {
             width={180}
             height={120}
           />
-          <p className="text-green-800 font-bold text-base m-1">{type}</p>
+          <p className="text-green-800 font-bold text-base m-1">{category}</p>
           <p className="text-black font-bold text-xl">{name}</p>
           <p className="text-black text-base">{description}</p>
         </div>

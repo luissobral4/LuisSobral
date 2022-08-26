@@ -1,12 +1,13 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/about": "pages/about.js",
+  "/about": "pages/about.html",
+  "/header": "pages/header.html",
   "/api/hello": "pages/api/hello.js",
-  "/header": "pages/header.js",
-  "/": "pages/index.js",
+  "/": "pages/index.html",
+  "/projects": "pages/projects.html",
+  "/skills": "pages/skills.html",
+  "/_document": "pages/_document.js",
   "/project/[pid]": "pages/project/[pid].js",
-  "/projects": "pages/projects.js",
-  "/skills": "pages/skills.js",
-  "/_document": "pages/_document.js"
+  "/404": "pages/404.html"
 }
