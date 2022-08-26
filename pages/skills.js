@@ -2,7 +2,7 @@ import Skill from '../components/skill.js'
 
 export default function About() {
   return (
-    <div className="px-40 mx-auto">
+    <div className="px-6 mx-auto lg:mx-72">
       <h2 className="text-black dark:text-white lg:text-6xl text-4xl my-6 font-times font-bold text-center">
         Skills
       </h2>
