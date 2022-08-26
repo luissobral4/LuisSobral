@@ -17,7 +17,7 @@ export default function project ({ postData }) {
           <div className="">
             <Image
               src={postData.image}
-              layout="responsive"
+              layout="intrinsic"
               width={500}
               height={300}
             />
