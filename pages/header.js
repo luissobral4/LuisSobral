@@ -28,7 +28,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="dark:bg-green-900 dark:text-white bg-white text-green-900">
+    <div className="dark:bg-green-900 dark:text-white bg-white text-green-900 w-full">
       <Link href="/">
         <h2 className="text-green-900 dark:text-white cursor-pointer lg:text-6xl text-4xl pt-2 font-times font-bold text-center">
           Luís Sobral

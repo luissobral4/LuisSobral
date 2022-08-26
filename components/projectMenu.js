@@ -9,7 +9,7 @@ export default function ProjectMenu({name,description,image,category,languagues,
   });
   return(
     <>
-      <div className="w-[500px] rounded-xl mx-auto text-black place-content-center ring-black">
+      <div className="w-[400px] sm:w-[500px] rounded-xl mx-auto text-black place-content-center ring-black">
         <div className="">
           <button type="button" key="Description" className="w-1/2 p-4 hover:border-b-4 text-xl font-bold text-green-900 dark:text-gray-200 dark:border-white focus:border-b-4 border-green-900" onClick={() => setState(0)}>
             Description
