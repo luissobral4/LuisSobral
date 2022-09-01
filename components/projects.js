@@ -39,8 +39,8 @@ export function ProjectCard({category,name,description,image,technologies,github
             <Image
               src={image}
               layout="fixed"
-              width={400}
-              height={280}
+              width={350}
+              height={250}
               className="hover:opacity-50 hover:cursor-pointer"
             />
           </Link>
