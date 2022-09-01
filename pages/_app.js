@@ -1,12 +1,12 @@
 import '../styles/globals.css';
-import Navbar from './header.js';
+import Navbar from '../components/navbar.js';
 import Footer from '../components/footer.js';
 import {ThemeProvider} from 'next-themes';
 
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider attribute='class'>
-      <div className="dark:bg-green-900 bg-white">
+      <div className="dark:bg-green-900 bg-white min-h-screen">
         <Navbar />
         <Component {...pageProps} />
         <Footer />

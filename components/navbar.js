@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link';
-import React, { useState,useEffect } from "react";
+import {useState} from "react";
 import {useTheme} from 'next-themes';
-import {MdDarkMode, MdLightMode} from 'react-icons/ai';
+import {MdDarkMode, MdLightMode} from 'react-icons/md';
 
 export default function Navbar() {
   const [active, setActive] = useState(false);
@@ -12,40 +12,29 @@ export default function Navbar() {
     setActive(!active);
   };
 
-  const {systemTheme,theme,setTheme} = useTheme();
-  const [mounted,setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  },[]);
+  const {theme,setTheme} = useTheme()
 
   const themeToggler = () => {
-    if(!mounted) return null;
-
-    const currTheme = theme === 'system' ? systemTheme : theme;
-
-    if(currTheme === 'dark'){
+    if(theme === 'light'){
       return(
-        <MdLightMode className="w-7 h-7" role="button" onClick={() => setTheme('light')}/>
+        <MdDarkMode className="w-8 h-8 mx-auto text-green-900" role="button" onClick={() => setTheme('dark')}/>
       );
     } else {
       return(
-        <MdDarkMode className="w-7 h-7" role="button" onClick={() => setTheme('dark')}/>
+        <MdLightMode className="w-8 h-8 mx-auto dark:text-white" role="button" onClick={() => setTheme('light')}/>
       );
     }
   };
-  return (
-    <div className="dark:bg-green-200 bg-white">
-      <div className="flex">
-        <Link href="/">
-          <h2 className="text-green-900 cursor-pointer lg:text-6xl text-4xl mt-2 font-times font-bold text-center">
-            Luís Sobral
-          </h2>
-        </Link>
-      {themeToggler()}
-      </div>
 
-      <div className="divide-d text-green-900 lg:text-xl text-lg place-content-center hidden md:flex my-2">
+  return (
+    <div className="dark:bg-green-900 dark:text-white bg-white text-green-900 w-full">
+      <Link href="/">
+        <h2 className="text-green-900 dark:text-white cursor-pointer lg:text-6xl text-4xl pt-2 font-times font-bold text-center">
+          Luís Sobral
+        </h2>
+      </Link>
+      {themeToggler()}
+      <div className="divide-d dark:text-white text-green-900 lg:text-xl text-lg place-content-center hidden md:flex my-2">
         <div className="flex-initial px-4">
           <Link href="/">
             <h2 className="cursor-pointer hover:text-green-500"> Home </h2>
@@ -53,25 +42,25 @@ export default function Navbar() {
         </div>
 
         <div className="flex-initial px-4">
-          <Link href="/projects">
+          <Link href="/#about" scroll={false}>
+            <h2 className="cursor-pointer hover:text-green-500"> About Me </h2>
+          </Link>
+        </div>
+        <div className="flex-initial px-4">
+          <Link href="/#projects">
             <h2 className="cursor-pointer hover:text-green-500"> Projects </h2>
           </Link>
         </div>
         <div className="flex-initial px-4">
-          <Link href="/skills">
-            <h2 className="cursor-pointer hover:text-green-500"> Skills </h2>
-          </Link>
-        </div>
-        <div className="flex-initial px-4">
-          <Link href="/about">
-            <h2 className="cursor-pointer hover:text-green-500"> About </h2>
+          <Link href="/#more">
+            <h2 className="cursor-pointer hover:text-green-500"> More </h2>
           </Link>
         </div>
       </div>
 
 
       <div className="md:hidden w-6 h-6 mx-auto my-2">
-        <button className="lg:hidden text-green-900" onClick={handleClick}>
+        <button className="lg:hidden dark:text-white text-green-900" onClick={handleClick}>
           <svg
             className='w-6 h-6'
             fill='none'
@@ -89,13 +78,13 @@ export default function Navbar() {
         </button>
       </div>
 
-      <div className="border-b-4 border-green-900"/>
+      <div className="border-b-4 dark:border-white border-green-900"/>
       <div
         className={`${
           active ? '' : 'hidden'
         }   w-full inline-flex flex-grow md:hidden `}
       >
-        <div className="divide-y text-green-900 bg-gray-200 w-full h-[800px] text-center text-4xl">
+        <div className="divide-y dark:text-white text-green-900 dark:bg-green-900 bg-gray-100 w-full h-[800px] text-center text-4xl">
           <div>
             <Link href="/">
               <button className="cursor-pointer my-4 hover:text-green-500" onClick={() => setActive(false)}>
@@ -104,23 +93,23 @@ export default function Navbar() {
             </Link>
           </div>
           <div>
-            <Link href="/projects">
+            <Link href="/#about" scroll={false}>
+              <button className="cursor-pointer my-4 hover:text-green-500" onClick={() => setActive(false)}>
+                About Me
+              </button>
+            </Link>
+          </div>
+          <div>
+            <Link href="/#projects">
               <button className="cursor-pointer my-4 hover:text-green-500" onClick={() => setActive(false)}>
                 Projects
               </button>
             </Link>
           </div>
           <div>
-            <Link href="/skills">
+            <Link href="/#more">
               <button className="cursor-pointer my-4 hover:text-green-500" onClick={() => setActive(false)}>
-                Skills
-              </button>
-            </Link>
-          </div>
-          <div>
-            <Link href="/about">
-              <button className="cursor-pointer my-4 hover:text-green-500" onClick={() => setActive(false)}>
-                About
+                More
               </button>
             </Link>
           </div>
