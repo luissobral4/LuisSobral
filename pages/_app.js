@@ -6,7 +6,7 @@ import {ThemeProvider} from 'next-themes';
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider attribute='class'>
-      <div className="dark:bg-green-900 bg-white min-h-screen">
+      <div className="dark:bg-green-900 bg-white w-full min-h-screen">
         <Navbar />
         <Component {...pageProps} />
         <Footer />

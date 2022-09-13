@@ -7,7 +7,7 @@ export default function CheckMore({description,link}) {
     <>
       <h1 id="more"className="text-green-900 dark:text-green-100 text-sm lg:text-base text-center"> 3. Get in touch</h1>
       <h1 className="text-black font-bold dark:text-white lg:text-4xl text-2xl text-center"> Check Out More</h1>
-      <p className="text-black dark:text-white mx-auto max-w-[400px] mt-4 pr-2">
+      <p className="text-black dark:text-white mx-auto max-w-[300px] sm:max-w-[400px] mt-4 pr-2">
         {description}
       </p>
       <Link href={link}>

@@ -25,10 +25,10 @@ export function ProjectCard({category,name,description,image,technologies,github
   return (
     <>
       <div className="flex flex-col md:flex-row place-content-center mb-12">
-        <div className="flex flex-col w-[400px] md:w-[500px] text-base md:text-xl md:m-1 mx-auto text-black dark:text-white">
+        <div className="flex flex-col sm:w-[400px] md:w-[500px] text-base md:text-xl md:m-1 mx-auto text-black dark:text-white">
           <p className="text-green-800 dark:text-green-200 font-bold">{category}</p>
           <p className="font-bold text-xl md:text-2xl">{name}</p>
-          <div className="flex dark:bg-green-800 bg-green-100 md:max-w-[500px] max-w-[300px]">{description}</div>
+          <div className="flex dark:bg-green-800 bg-green-100 md:max-w-[500px] max-w-[300px] p-1">{description}</div>
           <p className="text-sm md:text-base">{technologies}</p>
           <Link href={github}>
             <AiFillGithub className="w-12 h-12 my-4 text-black dark:text-white cursor-pointer dark:hover:text-black hover:text-green-700" />
@@ -38,7 +38,6 @@ export function ProjectCard({category,name,description,image,technologies,github
           <Link href= {link}>
             <Image
               src={image}
-              layout="fixed"
               width={350}
               height={250}
               className="hover:opacity-50 hover:cursor-pointer"
@@ -52,16 +51,16 @@ export function ProjectCard({category,name,description,image,technologies,github
 
 export function BasicCard({name,description,technologies,github}){
   return(
-    <div className="m-4 bg-green-100 dark:bg-green-800 h-[250px] w-[350px] text-black dark:text-white transition ease-in-out delay-150 duration-300 hover:-translate-y-4">
+    <div className="m-4 bg-green-100 dark:bg-green-800 h-[200px] w-[250px] sm:h-[250px] sm:w-[350px] text-black dark:text-white transition ease-in-out delay-150 duration-300 hover:-translate-y-4">
       <div className="flex">
-        <AiOutlineProject className="w-16 h-16 m-4 text-black dark:text-white"/>
+        <AiOutlineProject className="sm:w-16 sm:h-16 w-12 h-12 m-2 sm:m-4 text-black dark:text-white"/>
         <Link href={github}>
-          <AiFillGithub className="w-8 h-8 ml-48 mt-8 text-black dark:text-white cursor-pointer dark:hover:text-black hover:text-green-700" />
+          <AiFillGithub className="w-8 h-8 sm:ml-48 sm:mt-8 ml-32 mt-4 text-black dark:text-white cursor-pointer dark:hover:text-black hover:text-green-700" />
         </Link>
       </div>
       <div className="ml-6">
-        <p className="font-bold text-green-800 dark:text-green-200 text-xl">{name}</p>
-        <p className="w-[250px] text-base">{description}</p>
+        <p className="font-bold text-green-800 dark:text-green-200 text-base sm:text-xl">{name}</p>
+        <p className="sm:w-[250px] w-[200px] text-sm sm:text-base">{description}</p>
         <p className="mt-4 text-sm">{technologies}</p>
       </div>
     </div>
