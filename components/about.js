@@ -24,7 +24,7 @@ export default function AboutComp({image,description,description2,description3})
               <li>Java</li>
               <li>JavaScript</li>
               <li>Haskell</li>
-              <li>C</li>
+              <li>C/C++</li>
               <li>Python</li>
             </ul>
           </div>
