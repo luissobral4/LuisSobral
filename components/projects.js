@@ -5,6 +5,13 @@ import { AiFillGithub,AiOutlineProject } from 'react-icons/ai';
 import { useState } from "react";
 
 const MENU_LIST = [
+  { name:"MatchUp - A way to make your tournaments come to life!",description:"Online platform to help tournaments organizers gener- ate and advertise tournaments and display results.", image:"/matchup.png",
+    category:"Web Development",
+    languagues:"JavaScript",
+    date: "February 2023",
+    technologies: "ExpressJS ReactJS MySQL",
+    git: "https://github.com/Tourette137/PI_PrimeG",
+    link: "https://matchup-tan.vercel.app/"},
   { name:"BusPrime", description:"Platform focused in the comercialize public transport tickets.", image:"/busprime.png",
     category:"Web Development",
     languagues:"Java, HTML",
@@ -12,13 +19,6 @@ const MENU_LIST = [
     technologies: "Vue.js Spring Html Java",
     git: "https://bus-prime-frontend.vercel.app/",
     link: "https://bus-prime-frontend.vercel.app/"},
-  { name:"MatchUp - A way to make your tournaments come to life!",description:"Online platform to help tournaments organizers gener- ate and advertise tournaments and display results.", image:"/matchup.png",
-    category:"Web Development",
-    languagues:"JavaScript",
-    date: "February 2023",
-    technologies: "ExpressJS ReactJS MySQL",
-    git: "https://github.com/Tourette137/PI_PrimeG",
-    link: "https://matchup-tan.vercel.app/"}
 ];
 
 export function ProjectCard({category,name,description,image,technologies,github,link}) {
