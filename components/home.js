@@ -12,7 +12,7 @@ const Background = () => (
         Computer Science
       </h1>
       <h1 className="text-gray-900 dark:text-gray-200 text-xl lg:text-2xl max-w-[300px] sm:max-w-[500px]">
-        I'm a computer science student at University of Minho, specialized in application engeneering.
+        I'm a computer science student at University of Minho, specialized in application engineering.
       </h1>
     </div>
 
