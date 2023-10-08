@@ -104,6 +104,7 @@ export default function Projects() {
         <BasicCard name="Rastos" description="Implementation of the Rastos game" technologies="C" github="https://github.com/luissobral4/LI2-Rastros-2019-2020/tree/main/LI2_Project"/>
         <BasicCard name="Haskell" description="Some small Haskell assignments" technologies="Haskell" github="https://github.com/luissobral4/PF-Haskell-tasks"/>
         <BasicCard name="OTT" description="Over the Top Service for streaming delivery" technologies="Java" github="https://github.com/luissobral4/ESR"/>
+        <BasicCard name="Tanks game" description="Haskell tanks game" technologies="Haskell Gloss" github="https://github.com/luissobral4/Haskell-tanks-game"/>
       </div>
       <div className="mt-8 border-4 w-[150px] hover:bg-green-200 dark:hover:bg-green-800 mx-auto text-xl font-bold text-green-900 dark:border-white border-green-900">
         <button type="button" key="ShowM" className={`${
