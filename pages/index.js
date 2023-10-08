@@ -20,7 +20,7 @@ export default function Index() {
         <Projects/>
       </div>
       <div className="mx-1 sm:mx-8 mt-80 md:mx-16 lg:mx-48">
-        <GetTouch description="I hope you enjoyed meeting my website! I will keep working in more projects, for more content visit my github." link="https://github.com/luissobral4"/>
+        <GetTouch description="I hope you enjoyed meeting my website! I will keep working on more projects, for more content visit my github." link="https://github.com/luissobral4"/>
       </div>
     </div>
   )

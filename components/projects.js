@@ -5,14 +5,14 @@ import { AiFillGithub,AiOutlineProject } from 'react-icons/ai';
 import { useState } from "react";
 
 const MENU_LIST = [
-  { name:"MatchUp - A way to make your tournaments come to life!",description:"Online platform to help tournaments organizers gener- ate and advertise tournaments and display results.", image:"/matchup.png",
+  { name:"MatchUp - A way to make your tournaments come to life!",description:"Online platform to help tournament organizers generate and advertise tournaments and display results.", image:"/matchup.png",
     category:"Web Development",
     languagues:"JavaScript",
     date: "February 2023",
     technologies: "ExpressJS ReactJS MySQL",
     git: "https://github.com/Tourette137/PI_PrimeG",
     link: "https://matchup-tan.vercel.app/"},
-  { name:"BusPrime", description:"Platform focused in the comercialize public transport tickets.", image:"/busprime.png",
+  { name:"BusPrime", description:"Platform focused on comercialize public transport tickets.", image:"/busprime.png",
     category:"Web Development",
     languagues:"Java, HTML",
     date: "June 2022",
@@ -98,11 +98,11 @@ export default function Projects() {
         <BasicCard name="RasBet" description="Implementation of a sports bet application." technologies="Java MySQL" github="https://github.com/luissobral4/RasBet-RAS"/>
         <BasicCard name="Bucket-Sort" description="Parallel programming in shared memory, performance of a bucket sort algorithm  ." technologies="C OpenMP" github="https://github.com/luissobral4/CP"/>
         <BasicCard name="Operating Systems" description="Control and Monitoring of communication processes" technologies="C Bash-Commands Signals" github="https://github.com/luissobral4/Operating-Systems/tree/main/SO/SO_Project"/>
-        <BasicCard name="SGV" description="Implementation of a menage sales system in C and in Java" technologies="C Java" github="https://github.com/luissobral4/LI3-Project-SGV"/>
+        <BasicCard name="SGV" description="Implementation of a manage sales system in C and in Java" technologies="C Java" github="https://github.com/luissobral4/LI3-Project-SGV"/>
       </div>
       <div className={`${active ? '' : 'hidden'} flex flex-wrap place-content-center`}>
-        <BasicCard name="Rastos" description="Implementation of the rastos Game" technologies="C" github="https://github.com/luissobral4/LI2-Rastros-2019-2020/tree/main/LI2_Project"/>
-        <BasicCard name="Haskell" description="Some small haskell assignments I had resolved" technologies="Haskell" github="https://github.com/luissobral4/PF-Haskell-tasks"/>
+        <BasicCard name="Rastos" description="Implementation of the Rastos game" technologies="C" github="https://github.com/luissobral4/LI2-Rastros-2019-2020/tree/main/LI2_Project"/>
+        <BasicCard name="Haskell" description="Some small Haskell assignments" technologies="Haskell" github="https://github.com/luissobral4/PF-Haskell-tasks"/>
         <BasicCard name="OTT" description="Over the Top Service for streaming delivery" technologies="Java" github="https://github.com/luissobral4/ESR"/>
       </div>
       <div className="mt-8 border-4 w-[150px] hover:bg-green-200 dark:hover:bg-green-800 mx-auto text-xl font-bold text-green-900 dark:border-white border-green-900">
